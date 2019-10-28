@@ -1,0 +1,28 @@
+{
+    "name": "chebur/validator-constraints",
+    "type": "library",
+    "description": "Some symfony validator constraints",
+    "keywords": [
+        "symfony",
+        "validator",
+        "constraint"
+    ],
+    "homepage": "https://github.com/vchebotarev",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vladimir Chebotarev",
+            "homepage": "http://github.com/vchebotarev",
+            "email": "v.yu.chebotarev@mail.ru"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Chebur\\Validator\\Constraint": "src"
+        }
+    },
+    "require": {
+        "php": "^7.1.3",
+        "symfony/validator": "^3.4 || ^4.4 || ^5.0"
+    }
+}
