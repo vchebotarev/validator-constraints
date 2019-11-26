@@ -7,7 +7,7 @@ namespace Chebur\Validator\Constraint;
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\Constraints\Composite;
 
-abstract class ConcreteComposite extends Composite
+abstract class AbstractConstraintList extends Composite
 {
     /**
      * @var Constraint[]
@@ -28,6 +28,6 @@ abstract class ConcreteComposite extends Composite
 
     public function validatedBy()
     {
-        return ConcreteCompositeValidator::class;
+        return AbstractConstraintListValidator::class;
     }
 }

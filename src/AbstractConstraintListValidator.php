@@ -8,12 +8,12 @@ use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;
 use Symfony\Component\Validator\Exception\UnexpectedTypeException;
 
-class ConcreteCompositeValidator extends ConstraintValidator
+class AbstractConstraintListValidator extends ConstraintValidator
 {
     public function validate($value, Constraint $constraint)
     {
-        if (!$constraint instanceof ConcreteComposite) {
-            throw new UnexpectedTypeException($constraint, ConcreteComposite::class);
+        if (!$constraint instanceof AbstractConstraintList) {
+            throw new UnexpectedTypeException($constraint, AbstractConstraintList::class);
         }
 
         $validator = $this->context->getValidator()->inContext($this->context);

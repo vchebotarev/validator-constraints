@@ -7,7 +7,7 @@ Validation will be passed if at least one child constraint validation passed
 ### KeyExists
 Looks into the value if the passed key exists in it.
 
-### ConcreteComposite
+### AbstractConstraintList
 Abstract composite constraint. Helpful to create any constraint combinations. 
 
 ### BreakOnFailure
