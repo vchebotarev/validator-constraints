@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Chebur\Validator\Constraint;
+namespace Chebur\Validator\Constraints;
 
 use Symfony\Component\Validator\Constraints\Composite;
 

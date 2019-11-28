@@ -18,7 +18,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Chebur\\Validator\\Constraint\\": "src"
+            "Chebur\\Validator\\Constraints\\": "src"
         }
     },
     "require": {
