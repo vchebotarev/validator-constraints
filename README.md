@@ -32,4 +32,7 @@ Composite constraint. Validation by child constraints will be stopped after firs
 Composite constraint. Similar to `All` constraint, but this one validates array keys - not values.
 
 ### AllUnique
-Check if passed array contains only unique values
+Checks if passed array contains only unique values
+
+### IntInString
+Checks if passed string contains only valid positive integer not more than `PHP_INT_MAX`
