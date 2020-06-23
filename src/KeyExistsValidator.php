@@ -7,6 +7,7 @@ namespace Chebur\Validator\Constraints;
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;
 use Symfony\Component\Validator\Exception\UnexpectedTypeException;
+use Symfony\Component\Validator\Exception\UnexpectedValueException;
 
 class KeyExistsValidator extends ConstraintValidator
 {
@@ -18,6 +19,10 @@ class KeyExistsValidator extends ConstraintValidator
 
         if (null === $value) {
             return;
+        }
+
+        if (!is_array($value)) {
+            throw new UnexpectedValueException($value, 'array');
         }
 
         if (!array_key_exists($constraint->key, $value)) {
