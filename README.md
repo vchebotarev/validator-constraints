@@ -30,3 +30,6 @@ Composite constraint. Validation by child constraints will be stopped after firs
 
 ### AllKey
 Composite constraint. Similar to `All` constraint, but this one validates array keys - not values.
+
+### AllUnique
+Check if passed array contains only unique values
