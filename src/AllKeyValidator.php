@@ -11,7 +11,7 @@ use Traversable;
 
 class AllKeyValidator extends ConstraintValidator
 {
-    public function validate($value, Constraint $constraint)
+    public function validate($value, Constraint $constraint): void
     {
         if (!$constraint instanceof AllKey) {
             throw new UnexpectedTypeException($constraint, AllKey::class);

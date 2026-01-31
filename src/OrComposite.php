@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Chebur\Validator\Constraints;
 
+use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\Constraints\Composite;
 
 /**
@@ -12,27 +13,24 @@ use Symfony\Component\Validator\Constraints\Composite;
  */
 class OrComposite extends Composite
 {
-    /**
-     * @var string
-     */
-    public $message = 'This value is not valid.';
+    public string $message = 'This value is not valid.';
 
     /**
-     * @var array
+     * @var Constraint[]
      */
-    public $constraints;
+    public array $constraints;
 
-    public function getDefaultOption()
+    public function getDefaultOption(): ?string
     {
         return 'constraints';
     }
 
-    public function getRequiredOptions()
+    public function getRequiredOptions(): array
     {
         return ['constraints'];
     }
 
-    protected function getCompositeOption()
+    protected function getCompositeOption(): string
     {
         return 'constraints';
     }

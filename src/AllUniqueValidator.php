@@ -11,7 +11,7 @@ use Symfony\Component\Validator\Exception\UnexpectedValueException;
 
 class AllUniqueValidator extends ConstraintValidator
 {
-    public function validate($value, Constraint $constraint)
+    public function validate($value, Constraint $constraint): void
     {
         if (!$constraint instanceof AllUnique) {
             throw new UnexpectedTypeException($constraint, AllUnique::class);

@@ -12,21 +12,21 @@ abstract class AbstractConstraintList extends Composite
     /**
      * @var Constraint[]
      */
-    public $constraints;
+    public array $constraints;
 
     abstract protected function getConstraints(): array;
 
-    protected function initializeNestedConstraints()
+    protected function initializeNestedConstraints(): void
     {
         $this->constraints = $this->getConstraints();
     }
 
-    public function getCompositeOption()
+    public function getCompositeOption(): string
     {
         return 'constraints';
     }
 
-    public function validatedBy()
+    public function validatedBy(): string
     {
         return AbstractConstraintListValidator::class;
     }

@@ -10,7 +10,7 @@ use Symfony\Component\Validator\Exception\UnexpectedTypeException;
 
 class AbstractConstraintListValidator extends ConstraintValidator
 {
-    public function validate($value, Constraint $constraint)
+    public function validate($value, Constraint $constraint): void
     {
         if (!$constraint instanceof AbstractConstraintList) {
             throw new UnexpectedTypeException($constraint, AbstractConstraintList::class);

@@ -12,7 +12,7 @@
     "authors": [
         {
             "name": "Vladimir Chebotarev",
-            "homepage": "http://github.com/vchebotarev",
+            "homepage": "https://github.com/vchebotarev",
             "email": "v.yu.chebotarev@mail.ru"
         }
     ],
@@ -22,7 +22,7 @@
         }
     },
     "require": {
-        "php": "^7.4 || ^8.0",
-        "symfony/validator": "^4.4 || ^5.4"
+        "php": "^8.2",
+        "symfony/validator": "^6.4 || ^7.4 || ^8.0"
     }
 }
